@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light" data-theme="mono">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">CV</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <canvas id="noise-canvas"></canvas>
+  <div class="view-counter" id="view-counter"></div>
+
+  <!-- CONTROLS: theme picker + dark toggle -->
+  <div class="controls" id="controls">
+    <button class="ctrl-btn" id="theme-toggle" aria-label="Cycle theme" title="Change theme">◐</button>
+    <button class="ctrl-btn" id="dark-toggle"  aria-label="Toggle dark mode" title="Toggle dark mode">◑</button>
+    <div class="theme-label" id="theme-label"></div>
+    <button class="ctrl-btn ctrl-pdf" id="pdf-btn" aria-label="Export PDF" title="Export as PDF">⬇</button>
+  </div>
+
+  <div class="page">
+
+    <header class="reveal">
+      <div class="header-photo-wrap" id="header-photo-wrap"></div>
+      <div class="header-left">
+        <div class="name" id="header-name"></div>
+        <div class="header-title" id="header-role"></div>
+      </div>
+      <div class="header-right">
+        <div class="contact-list" id="contact-list"></div>
+        <div id="availability-badge"></div>
+      </div>
+    </header>
+
+    <div class="divider reveal"></div>
+
+    <main>
+      <aside>
+        <section class="block reveal">
+          <div class="block-label">About</div>
+          <p class="about-text" id="about-text"></p>
+        </section>
+
+        <section class="block reveal">
+          <div class="block-label">Skills</div>
+          <div id="skills-categories"></div>
+        </section>
+
+        <section class="block reveal">
+          <div class="block-label">Certifications</div>
+          <div class="cert-list" id="cert-list"></div>
+        </section>
+
+        <section class="block reveal">
+          <div class="block-label">Languages</div>
+          <div class="lang-list" id="lang-list"></div>
+        </section>
+      </aside>
+
+      <div class="main-content">
+        <section class="block reveal">
+          <div class="block-label">Experience</div>
+          <div class="timeline" id="experience-list"></div>
+        </section>
+
+        <section class="block reveal">
+          <div class="block-label">Education</div>
+          <div class="timeline" id="education-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="reveal">
+      <span id="footer-name"></span>
+      <span id="footer-date"></span>
+    </footer>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
