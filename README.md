@@ -3,7 +3,7 @@
 A clean, self-hosted, single-page CV template.  
 **Edit one file. Deploy anywhere.**
 
-![Preview](preview.png)
+![Preview](preview.svg)
 
 ---
 
